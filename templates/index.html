@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloco de Notas</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <h1>Bloco de Notas</h1>
+
+    <!-- Formulário para adicionar nova nota -->
+    <form id="note-form">
+        <label for="title">Título:</label>
+        <input type="text" id="title" name="title" required><br><br>
+        
+        <label for="description">Descrição:</label><br>
+        <textarea id="description" name="description" rows="4" cols="50" required></textarea><br><br>
+        
+        <button type="button" onclick="saveNote()">Adicionar Nota</button>
+    </form>
+
+    <h2>Notas Existentes:</h2>
+    <ul id="notes-list">
+        <!-- As notas serão carregadas aqui via JavaScript -->
+    </ul>
+
+    <script src="../static/script.js"></script>
+</body>
+</html>

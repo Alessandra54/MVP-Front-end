@@ -1,0 +1,155 @@
+/* Resetando margens e padding para um estilo mais consistente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo o estilo básico da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo */
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Formulário de notas */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilo para campos de texto e botões */
+input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input:focus, textarea:focus {
+    border-color: #6c5ce7;
+    outline: none;
+}
+
+button {
+    background-color: #6c5ce7;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: #5e54d1;
+}
+
+/* Estilo para a lista de notas */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#notes-list {
+    list-style-type: none;
+    padding-left: 0;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#notes-list li {
+    background-color: #efefef;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between; /* Distribui os itens de maneira eficiente */
+    align-items: center; /* Centraliza os itens na linha */
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#notes-list li strong {
+    font-size: 1.2em;
+    color: #333;
+    flex-grow: 1; /* Faz o título crescer e ocupar o espaço disponível */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Botões de editar e excluir */
+button.edit, button.delete {
+    font-size: 0.8em;
+    padding: 5px 10px;
+    margin-left: 5px;
+    width: auto; /* Remove a largura total */
+}
+
+button.edit:hover, button.delete:hover {
+    background-color: #e74c3c; /* Cor de fundo para excluir */
+}
+
+/* Estilo de botão de excluir */
+button.delete {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Estilo de botão de editar */
+button.edit {
+    background-color: #f39c12;
+    color: white;
+}
+
+/* Ajuste na forma de apresentação dos botões */
+button.edit, button.delete {
+    font-size: 0.8em;
+    padding: 5px 10px;
+    margin-left: 5px;
+    width: auto;
+    border-radius: 4px;
+}
+
+button.edit:hover, button.delete:hover {
+    background-color: #e74c3c;
+}
+
+/* Estilo para o formulário de notas */
+textarea {
+    resize: vertical; /* Permite redimensionar o textarea apenas na direção vertical */
+}
+
+/* Para garantir que o layout se ajuste bem em telas pequenas */
+@media (max-width: 600px) {
+    form {
+        width: 100%;
+        max-width: 100%;
+    }
+    #notes-list li {
+        flex-direction: column; /* Empilha os itens verticalmente em telas pequenas */
+        align-items: flex-start;
+    }
+}
